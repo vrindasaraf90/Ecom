@@ -2,7 +2,7 @@ package com.streamliners.models;
 
 public class Variant {
     float price;
-    String name;
+    public static String name;
 
     public Variant(String name, float price){
         this.name = name;

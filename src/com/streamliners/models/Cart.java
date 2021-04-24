@@ -7,8 +7,8 @@ import java.util.HashMap;
 public class Cart {
 
     public HashMap<String, CartItem> cartItem = new HashMap<>();
-    public Float total;
-    public Float noOfItems;
+    public int total = 0;
+    public int noOfItems = 0 ;
 
     //Weight based product..
     public void add(Product product, float qty) {
@@ -40,8 +40,6 @@ public class Cart {
 
         //Adding for the first time..
         else {
-
-
             CartItem item = new CartItem(product.name, variant.price, 1F);
             cartItem.put(key, item);
         }
@@ -50,7 +48,6 @@ public class Cart {
         noOfItems++;
         total += variant.price;
     }
-
 
     ///Removing  product..
     public void remove(Product product) {
@@ -71,8 +68,10 @@ public class Cart {
 
 
     ///Removing all  variant of Variant based product..
-    public void removeAllVariantBasedProduct(Product product) {
-        for (Variant variant : product.VariantList) {
+    public void removeAllVariantBasedProduct(Product product)
+    {
+        for (Variant variant : product.VariantList
+        ) {
             String key = product.name + " " + Variant.name;
 
             if (cartItem.containsKey(key)) {
@@ -112,5 +111,10 @@ public class Cart {
                 ", noOfItems=" + noOfItems +
                 '}';
     }
+
+    public void add(Product surfExcel, Object o){
+    }
 }
+
+
 

@@ -1,26 +1,20 @@
 package com.streamliners.models;
 
-import jdk.internal.access.JavaIOFileDescriptorAccess;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
-
 public class Product {
 
     //COMMON..
     public String name;
     public String imageURL;
     public int type;
-    public com.streamliners.models.Variant[] variantList;
 
-    // public JavaIOFileDescriptorAccess variantsList;
     //WEIGHT BASED PRODUCT..
-    Float minQut;
-    public  Float pricePerKg;
+    public Float minQut;
+    public  Float pricePerKg = 0F;
 
     //VARIANT BASED PRODUCT..
-    public List<Variant> VariantList;
+    public List<Variant> VariantList = new ArrayList<>();
 
     //WB..
     public Product(String name, String imageURL, Float minQut, Float pricePerKg) {
@@ -31,30 +25,14 @@ public class Product {
         this.pricePerKg = pricePerKg;
     }
 
-    public Product(String name, String imageUrl, List<com.streamliners.models.Variant> variants) {
-    }
-
-    public Product(String orange, String s) {
-
-    }
-
-    // public Product(String productName, String imageURL, List<Variants> var) {
-    //}
-
     //VB..
-    public void Products(String name, String imageURL, List<Variant> variant) {
+    public Product(String name, String imageURL, List<Variant> variants) {
 
         type = ProductType.TYPE_VB;
         this.name = name;
         this.imageURL = imageURL;
-        this.VariantList = variant;
+        this.VariantList = variants;
     }
-
-    //public Product(String productName, String imageURL, List<com.company.Assignment4_1.Model.Variant> var) {
-    //}
-
-    //public Product(String productName, String imageURL, List<com.company.Assignment4_1.Model.Variant> var) {
-    //}
 
     @Override
     public String toString() {
@@ -78,8 +56,6 @@ public class Product {
         builder.append(" } ");
 
         return builder.toString();
-
-
     }
 }
 

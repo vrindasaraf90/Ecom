@@ -3,7 +3,7 @@ package com.streamliners.models;
 public class CartItem {
 
     public  String name;
-    Float UnitPerPrice;
+    public Float UnitPerPrice;
     public Float qty;
 
     public CartItem(String name, Float unitPerPrice, Float qty) {

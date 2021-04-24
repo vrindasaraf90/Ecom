@@ -12,8 +12,10 @@ public class Main {
     public static void main(String[] args) {
 
 
-            Product product = new Product("Apple", "");
-            Product orange = new Product("Orange", "");
+
+
+            Product apple = new Product("Apple", "",1F,80F);
+            Product orange = new Product("Orange", "",1F,90F);
             Product kiwi = new Product("kiwi", "", new ArrayList<>(
                     Arrays.asList(
                             new Variant("500gm", 50.0f),
@@ -24,12 +26,12 @@ public class Main {
                             new Variant("1kg", 100.0f))));
 
             Cart cart = new Cart();
-        cart.add(orange,2.5f);
-        cart.add(kiwi,kiwi.Variant.get(1));
-        cart.add(kiwi,kiwi.Variant.get(1));
-        cart.add(kiwi,kiwi.Variant.get(1));
-        cart.add(surfExcel,surfExcel.Variant.get(0));
-        cart.add(surfExcel,surfExcel.Variant.get(0));
+        cart.add(orange,2.5F);
+        cart.add(kiwi,  kiwi.VariantList.get(1));
+        cart.add(kiwi,  kiwi.VariantList.get(1));
+        cart.add(kiwi,  kiwi.VariantList.get(1));
+        cart.add(surfExcel,  surfExcel.VariantList.get(0));
+        cart.add(surfExcel,  surfExcel.VariantList.get(0));
 
         System.out.println(cart);
 
@@ -38,13 +40,10 @@ public class Main {
         System.out.println(cart);
 
 
-        cart.decrement(surfExcel,surfExcel.Variant.get(0));
+        cart.decrement(surfExcel, surfExcel.VariantList.get(0));
         System.out.println();
         System.out.println(cart);
 
-        cart.decrement(surfExcel,Variant.get(0));
-        System.out.println();
-        System.out.println(cart);
         }
     }
 

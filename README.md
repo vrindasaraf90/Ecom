@@ -4,6 +4,8 @@ For the project details watch the tutorial https://youtu.be/jQWKaGtZCqM ; https:
 
 
 Features of our Application:
+
+
 CUSTOMER
 - ADD product to cart
 - EDIT product 
@@ -16,3 +18,4 @@ SHOPKEEPER
 - EDIT product
 - DELETE product
 
+C:\Users\india\Desktop

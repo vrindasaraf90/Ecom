@@ -10,7 +10,7 @@ public class Product {
     public int type;
 
     //WEIGHT BASED PRODUCT..
-    public Float minQut;
+    public Float minQty;
     public  Float pricePerKg = 0F;
 
     //VARIANT BASED PRODUCT..
@@ -21,7 +21,7 @@ public class Product {
         type = ProductType.TYPE_WB;
         this.name = name;
         this.imageURL = imageURL;
-        this.minQut = minQut;
+        this.minQty = minQut;
         this.pricePerKg = pricePerKg;
     }
 
@@ -47,7 +47,7 @@ public class Product {
         builder.append("name = ").append(name);
 
         if (type == ProductType.TYPE_VB) {
-            builder.append("minQty = ").append(minQut);
+            builder.append("minQty = ").append(minQty);
             builder.append("pricePerKg = ").append(pricePerKg);
         } else {
             builder.append("VariantBased { ");

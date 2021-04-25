@@ -18,4 +18,14 @@ SHOPKEEPER
 - EDIT product
 - DELETE product
 
+IMAGES
+
 ![Untitled](https://user-images.githubusercontent.com/72187181/115988343-34f89e80-a544-11eb-943b-c509b2102622.png)
+![Screenshot (126)](https://user-images.githubusercontent.com/72187181/115988457-c6681080-a544-11eb-9fae-6c6f8c319371.png)
+![Screenshot (127)](https://user-images.githubusercontent.com/72187181/115988466-cec04b80-a544-11eb-8e71-f0ccd542b05b.png)
+
+
+
+
+
+

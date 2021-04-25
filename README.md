@@ -18,4 +18,4 @@ SHOPKEEPER
 - EDIT product
 - DELETE product
 
-C:\Users\india\Desktop
+![Untitled](https://user-images.githubusercontent.com/72187181/115988343-34f89e80-a544-11eb-943b-c509b2102622.png)

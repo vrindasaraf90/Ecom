@@ -22,12 +22,12 @@ public class MenuShopkeeper {
         //to add WBP
         if (option == 1) addWBP(products);
 
-            // To add variant based product
+            // To add VBP
         else if (option == 2) addVBP(products);
 
             // if user enter any other option
         else
-            System.out.println("Incorrect Option. select 1 or 2");
+            System.out.println("Incorrect Option.");
     }
 
     //to add WBP
@@ -43,7 +43,7 @@ public class MenuShopkeeper {
 
         //to Check if the product already exists
         if (products.containsKey(key)) {
-            System.out.println( "ERROR! Product already exists.");
+            System.out.println("ERROR! Product already exists.");
             return;
         }
 
@@ -73,7 +73,7 @@ public class MenuShopkeeper {
 
         //to Check if the product already exists
         if (products.containsKey(key)) {
-            System.out.println( "ERROR! Product already exists.");
+            System.out.println("ERROR! Product already exists.");
             return;
         }
 
@@ -92,12 +92,12 @@ public class MenuShopkeeper {
 
         // Adding variants to the product
         for (int x = 0; x < s.length; x += 2) {
-            Variant variant = new Variant(s[x],Float.parseFloat(s[x+1]));
+            Variant variant = new Variant(s[x], Float.parseFloat(s[x + 1]));
             variants.add(variant);
         }
 
         // Adding the product in the products map
-        products.put(key,new Product(key, imageURL, variants));
+        products.put(key, new Product(key, imageURL, variants));
         System.out.println("DONE! Product added successfully");
 
     }
@@ -105,36 +105,36 @@ public class MenuShopkeeper {
     //to edit a product
     public static void editProduct(HashMap<String, Product> products) {
 
-            // Index of the menu
-            int i = 1;
+        // Index of the menu
+        int i = 1;
 
-            // Array of objects for the name of the available products
-            Object[] productNames = products.keySet().toArray();
+        // Array of objects for the name of the available products
+        Object[] productNames = products.keySet().toArray();
 
-            // Displaying name of the products available
-            for (String key : products.keySet()) {
-                System.out.print("\n" + (i++) + ": " + products.get(key).name);
-            }
-
-            // Taking response from the user
-            System.out.print("\nPlease enter your response: ");
-            int chooseOption = scanner.nextInt();
-
-            // Index of the product
-            int index = chooseOption - 1;
-
-            // Accessing the product through the key which is accessed from it's index value
-            Product product = products.get(productNames[index]);
-
-            // Checking the product type
-            if (product.type == ProductType.TYPE_WB) {
-                editWBP(product);
-            } else if (product.type == ProductType.TYPE_VB) {
-                editVBP(product);
-            }
+        // Displaying name of the products available
+        for (String key : products.keySet()) {
+            System.out.print("\n" + (i++) + ": " + products.get(key).name);
         }
 
-        //to edit WBP
+        // Taking response from the user
+        System.out.print("\nPlease enter your response: ");
+        int chooseOption = scanner.nextInt();
+
+        // Index of the product
+        int index = chooseOption - 1;
+
+        // Accessing the product through the key which is accessed from it's index value
+        Product product = products.get(productNames[index]);
+
+        // Checking the product type
+        if (product.type == ProductType.TYPE_WB) {
+            editWBP(product);
+        } else if (product.type == ProductType.TYPE_VB) {
+            editVBP(product);
+        }
+    }
+
+    //to edit WBP
     private static void editWBP(Product product) {
 
         // Taking all the field new
@@ -153,7 +153,7 @@ public class MenuShopkeeper {
         product.minQty = newMinQty;
         product.pricePerKg = newPricePerKg;
 
-        System.out.println("\u001B[32m" + "DONE! Product edit successfully." + "\u001B[0m");
+        System.out.println("DONE! Product edit successfully.");
     }
 
     //to edit VBP
@@ -174,7 +174,7 @@ public class MenuShopkeeper {
 
         // Adding variants to the product
         for (int x = 0; x < s.length; x += 2) {
-            Variant variant = new Variant(s[x],Float.parseFloat(s[x+1]));
+            Variant variant = new Variant(s[x], Float.parseFloat(s[x + 1]));
             variants.add(variant);
         }
 
@@ -188,14 +188,6 @@ public class MenuShopkeeper {
     //to delete a product
     public static void deleteProduct(HashMap<String, Product> products) {
         while (true) {
-            // Checking for the available products
-            if (products.isEmpty()) {
-                System.out.print("\u001B[31m" + "\nSorry :( No products available" + "\u001B[0m");
-                return;
-            }
-
-            // Displaying menu to select product to add in the cart
-            System.out.print("\nChoose from the following products...");
 
             // Index of the menu
             int i = 1;

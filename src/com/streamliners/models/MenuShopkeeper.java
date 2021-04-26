@@ -19,17 +19,21 @@ public class MenuShopkeeper {
 
         int option = 1;
 
-        //to add WBP
-        if (option == 1) addWBP(products);
+        while (option != 0) {
+            System.out.print(menu);
+            option = scanner.nextInt();
 
-            // To add VBP
-        else if (option == 2) addVBP(products);
+            //to add WBP
+            if (option == 1) addWBP(products);
 
-            // if user enter any other option
-        else
-            System.out.println("Incorrect Option.");
+                // To add VBP
+            else if (option == 2) addVBP(products);
+
+                // if user enter any other option
+            else
+                System.out.println("Incorrect Option.");
+        }
     }
-
     //to add WBP
     private static void addWBP(HashMap<String, Product> products) {
         //name of the product

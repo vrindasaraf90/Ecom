@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
 
         //to check who is using the application
-        String a = "Are you a customer(1) OR shopkeeper(0)";
+        System.out.println("Are you a customer(1) OR shopkeeper(0)");
 
         Scanner who = new Scanner(System.in);
         int option = who.nextInt();

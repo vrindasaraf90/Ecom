@@ -1,6 +1,7 @@
 # Ecom
 I have create an E-commerce app for Customer and Shopkeeper both.
-For the project details watch the tutorial https://youtu.be/jQWKaGtZCqM ; https://youtu.be/x_zixlLEPEY.
+For the project details watch the tutorial:
+https://youtu.be/jQWKaGtZCqM ; https://youtu.be/x_zixlLEPEY.
 
 
 Features of our Application:
